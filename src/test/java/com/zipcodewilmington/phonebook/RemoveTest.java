@@ -17,7 +17,7 @@ public class RemoveTest {
         phoneBook.remove(name);
 
         // then
-        Assert.assertFalse(phoneBook.hasEntry(name));
+        Assert.assertFalse(phoneBook.hasEntry(name,phoneNumber));
     }
 
     @Test
@@ -33,7 +33,7 @@ public class RemoveTest {
         phoneBook.remove(name);
 
         // then
-        Assert.assertFalse(phoneBook.hasEntry(name));
+        Assert.assertFalse(phoneBook.hasEntry(name,phoneNumber));
     }
 
 
@@ -44,12 +44,12 @@ public class RemoveTest {
         String name = "Smith";
         String phoneNumber = "302-554-4535";
         phoneBook.add(name, phoneNumber);
-        Assert.assertTrue(phoneBook.hasEntry(name, phoneNumber));
+        Assert.assertTrue(phoneBook.hasEntry(name,phoneNumber));
 
         // when
         phoneBook.remove(name);
 
         // then
-        Assert.assertFalse(phoneBook.hasEntry(name));
+        Assert.assertFalse(phoneBook.hasEntry(name,phoneNumber));
     }
 }
